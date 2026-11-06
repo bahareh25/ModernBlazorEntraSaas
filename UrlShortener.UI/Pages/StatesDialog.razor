@@ -1,0 +1,106 @@
+﻿@using MudBlazor;
+@inherits StatesDialogBase;
+<MudDialog>
+
+	<DialogContent>
+
+
+		<MudGrid Spacing="3">
+
+			<!-- VISITS -->
+			<MudItem xs="12" sm="6" Class="d-flex">
+
+				<MudPaper Class="pa-4 flex-grow-1" Elevation="3">
+
+					<MudStack Direction="Row"
+							  Spacing="2"
+							  AlignItems="AlignItems.Center">
+
+						<MudIcon Icon="@Icons.Material.Filled.Visibility"
+								 Color="Color.Primary"
+								 Size="Size.Large" />
+
+						<MudStack Spacing="0">
+
+							<MudText Typo="Typo.caption">
+								Total Visits
+							</MudText>
+
+							<MudText Typo="Typo.h4"
+									 Color="Color.Primary">
+								@Stats.VisitCount
+							</MudText>
+
+						</MudStack>
+
+					</MudStack>
+
+				</MudPaper>
+
+			</MudItem>
+
+			<!-- LAST CLICK -->
+			<MudItem xs="12" sm="6" Class="d-flex">
+
+				<MudPaper Class="pa-4 flex-grow-1" Elevation="3">
+
+					<MudStack Direction="Row"
+							  Spacing="2"
+							  AlignItems="AlignItems.Center">
+
+						<MudIcon Icon="@Icons.Material.Filled.Schedule"
+								 Color="Color.Secondary"
+								 Size="Size.Large" />
+
+						<MudStack Spacing="0">
+
+							<MudText Typo="Typo.caption">
+								Last Click
+							</MudText>
+
+							<MudText Typo="Typo.h6" Color="Color.Primary">
+
+								@(Stats.LastClickAt?.ToString("yyyy-MM-dd HH:mm")
+															?? "Never")
+
+							</MudText>
+
+						</MudStack>
+
+					</MudStack>
+
+				</MudPaper>
+
+			</MudItem>
+
+		</MudGrid>
+
+	</DialogContent>
+
+	<DialogActions>
+
+		<MudButton Variant="Variant.Text"
+				   OnClick="Close">
+			Close
+		</MudButton>
+
+	</DialogActions>
+
+</MudDialog>
+@* <MudDialog>
+    <DialogContent>
+
+        <MudPaper Class="pa-4 mt-3">
+
+            <MudText>
+                Visits: @Stats.VisitCount
+            </MudText>
+
+            <MudText>
+                Last Click: @(Stats.LastClickAt?.ToString("yyyy-MM-dd HH:mm") ?? "Never")
+            </MudText>
+
+        </MudPaper>
+
+    </DialogContent>
+</MudDialog> *@

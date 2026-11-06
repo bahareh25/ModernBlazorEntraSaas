@@ -1,0 +1,48 @@
+﻿
+@inherits CreateLinkDialogBase;
+@using MudBlazor;
+
+<MudDialog>
+
+    <DialogContent>
+
+        @* <MudText Typo="Typo.h6" Class="mb-4">
+            Create Short Link
+        </MudText> *@
+
+        <MudTextField Label="Original URL"
+                      Variant="Variant.Outlined"
+                      FullWidth="true"
+                      @bind-Value="model.Url" />
+
+        <MudTextField Label="Password (optional)"
+                      Variant="Variant.Outlined"
+                      FullWidth="true"
+                      Class="mt-3"
+                      @bind-Value="model.Password" />
+
+        <MudDatePicker Label="Expiration Date"
+                       Variant="Variant.Outlined"
+                       Class="mt-3"
+                       @bind-Date="model.ExpirationDate" />
+
+    </DialogContent>
+
+    <DialogActions>
+
+        <MudButton OnClick="Cancel"
+                   Variant="Variant.Text">
+            Cancel
+        </MudButton>
+
+        <MudButton OnClick="Create"
+                   Color="Color.Primary"
+                   Variant="Variant.Filled">
+
+            Create
+
+        </MudButton>
+
+    </DialogActions>
+
+</MudDialog>

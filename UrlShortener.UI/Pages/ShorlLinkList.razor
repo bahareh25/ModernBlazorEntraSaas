@@ -1,0 +1,199 @@
+﻿@page "/short-link-list"
+@inherits ShortLinkListBase;
+
+@using MudBlazor;
+<h3>ShorlLinkList</h3>
+
+
+@if (links == null)
+{
+    <div class="d-flex justify-center pa-6">
+        <MudProgressCircular Indeterminate="true"
+                             Color="Color.Primary"
+                             Size="Size.Large" />
+    </div>
+}
+else
+{
+    <MudPaper Class="pa-4 mt-4" Elevation="2">
+
+        <!-- HEADER -->
+        <div class="d-flex justify-space-between align-center mb-4">
+
+            <MudText Typo="Typo.h5">
+                My Links
+            </MudText>
+
+           @*  <MudButton Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       StartIcon="@Icons.Material.Filled.Add">
+                Create Link
+            </MudButton> *@
+            <MudButton Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       StartIcon="@Icons.Material.Filled.Add"
+                       OnClick="OpenCreateDialog">
+
+                Create Link
+
+            </MudButton>
+
+        </div>
+
+        <!-- TABLE -->
+        <MudTable Items="links"
+                  Hover="true"
+                  Striped="true"
+                  Bordered="false"
+                  Dense="false">
+
+            <!-- HEADER -->
+            <HeaderContent>
+
+                <MudTh>Short</MudTh>
+                <MudTh>Original URL</MudTh>
+                <MudTh>Created</MudTh>
+                <MudTh>Expires</MudTh>
+                <MudTh>Code</MudTh>
+                <MudTh>Protected</MudTh>
+                <MudTh class="text-end">Actions</MudTh>
+
+            </HeaderContent>
+
+            <!-- ROW -->
+            <RowTemplate>
+
+                <!-- SHORT URL -->
+                <MudTd>
+
+                    <MudLink Href="@context.ShortUrl"
+                             Target="_blank">
+                        @context.ShortCode
+                    </MudLink>
+
+                </MudTd>
+
+                <!-- ORIGINAL URL -->
+                <MudTd>
+
+                    <MudText Style="
+                        max-width:300px;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;">
+
+                        @context.OriginalUrl
+
+                    </MudText>
+
+                </MudTd>
+
+                <!-- CREATED -->
+                <MudTd>
+
+                    @context.CreatedAt.ToString("yyyy-MM-dd")
+
+                </MudTd>
+
+                <!-- EXPIRATION -->
+                <MudTd>
+
+                    @if (context.ExpirationDate.HasValue)
+                    {
+                        <MudChip Color="Color.Warning"
+                                 Variant="Variant.Filled"
+                                 Size="Size.Small">
+
+                            @context.ExpirationDate.Value.ToString("yyyy-MM-dd")
+
+                        </MudChip>
+                    }
+                    else
+                    {
+                        <MudChip Color="Color.Success"
+                                 Variant="Variant.Outlined"
+                                 Size="Size.Small">
+
+                            Never
+
+                        </MudChip>
+                    }
+
+                </MudTd>
+
+                <!-- CODE -->
+                <MudTd>
+
+                    <MudChip Color="Color.Info"
+                             Variant="Variant.Outlined"
+                             Size="Size.Small">
+
+                        @context.ShortCode
+
+                    </MudChip>
+
+                </MudTd>
+
+                <!-- PROTECTION -->
+                <MudTd>
+
+                    @if (!string.IsNullOrEmpty(context.PasswordHash))
+                    {
+                        <MudChip Color="Color.Error"
+                                 StartIcon="@Icons.Material.Filled.Lock"
+                                 Size="Size.Small">
+
+                            Locked
+
+                        </MudChip>
+                    }
+                    else
+                    {
+                        <MudChip Color="Color.Success"
+                                 StartIcon="@Icons.Material.Filled.LockOpen"
+                                 Size="Size.Small">
+
+                            Open
+
+                        </MudChip>
+                    }
+
+                </MudTd>
+
+                <!-- ACTIONS -->
+                <MudTd Class="text-end">
+
+                    <MudIconButton Icon="@Icons.Material.Filled.ContentCopy"
+                                   Color="Color.Primary"
+                                   Size="Size.Small" OnClick="@(() => Copy(context.ShortUrl))" />
+
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                   Color="Color.Error"
+                                   Size="Size.Small"
+                                   Class="ms-2" OnClick="@(() => ConfirmDelete(context.Id))" />
+                   
+                        <MudIconButton Icon="@Icons.Material.Filled.Analytics"
+                                       OnClick="@(() => OpenStats(context.Id))" />
+               
+
+                </MudTd>
+
+            </RowTemplate>
+
+            <!-- EMPTY STATE -->
+            <NoRecordsContent>
+
+                <MudText Class="pa-4"
+                         Align="Align.Center"
+                         Color="Color.Secondary">
+
+                    No links found
+
+                </MudText>
+
+            </NoRecordsContent>
+
+        </MudTable>
+
+    </MudPaper>
+}

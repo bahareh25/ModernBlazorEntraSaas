@@ -1,0 +1,77 @@
+﻿
+@inherits CreateLinkBase;
+@page "/create-link"
+
+@using MudBlazor
+
+
+ <MudPaper Class="pa-4 mt-1" Elevation="2" Style="overflow: visible;">
+<MudForm @ref="_form">
+
+    <MudGrid Spacing="3">
+
+        <!-- Original URL -->
+        <MudItem xs="12" md="10">
+
+            <MudTextField T="string"
+                          Label="Original URL"
+                          Variant="Variant.Outlined"
+                          FullWidth="true"
+                          Required="true"
+                          RequiredError="URL is required"
+                          @bind-Value="model.Url" />
+
+        </MudItem>
+
+        <!-- Password -->
+        <MudItem xs="12">
+
+            <MudTextField T="string"
+                          Label="Password (optional)"
+                          Variant="Variant.Outlined"
+                          FullWidth="true"
+                          InputType="InputType.Password"
+                          @bind-Value="model.Password" />
+
+        </MudItem>
+
+        <!-- Expiration Date -->
+        <MudItem xs="12">
+
+            <MudDatePicker Label="Expiration Date"
+                           Variant="Variant.Outlined"
+                           FullWidth="true"
+                               DateFormat="yyyy-MM-dd"
+                           Editable="true"
+                           @bind-Date="model.ExpirationDate" />
+
+        </MudItem>
+
+    </MudGrid>
+
+    <!-- Buttons -->
+    <MudStack Row="true"
+              Justify="Justify.FlexEnd"
+              Spacing="2"
+              Class="mt-6">
+
+        <MudButton OnClick="Cancel"
+                   Variant="Variant.Text">
+
+            Cancel
+
+        </MudButton>
+
+        <MudButton OnClick="Create"
+                   Color="Color.Primary"
+                   Variant="Variant.Filled">
+
+            Create
+
+        </MudButton>
+
+    </MudStack>
+
+</MudForm>
+
+</MudPaper>

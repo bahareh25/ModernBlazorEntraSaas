@@ -1,0 +1,53 @@
+﻿@inherits LayoutComponentBase
+@using MudBlazor;
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+
+    <!-- TOP BAR -->
+    <MudAppBar Color="Color.Primary" Elevation="1">
+        <MudText Typo="Typo.h6">URL Shortener</MudText>
+    </MudAppBar>
+
+    <!-- SIDEBAR -->
+    <MudDrawer Open="true" Variant="DrawerVariant.Persistent">
+
+        <MudNavMenu>
+
+            <MudNavLink Href="/dashboard" Icon="@Icons.Material.Filled.Dashboard">
+                Dashboard
+            </MudNavLink>
+
+            <MudNavLink Href="/short-link-list" Icon="@Icons.Material.Filled.Link">
+                Links
+            </MudNavLink>
+
+        </MudNavMenu>
+
+    </MudDrawer>
+
+    <!-- MAIN CONTENT -->
+    <MudMainContent Class="pa-4">
+        @Body
+    </MudMainContent>
+
+</MudLayout>
+
+@* <div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+ *@

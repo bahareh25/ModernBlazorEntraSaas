@@ -1,0 +1,81 @@
+﻿@inherits LayoutComponentBase  
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using MudBlazor  
+@using Microsoft.AspNetCore.Components.Authorization  
+
+<MudThemeProvider />  
+<MudDialogProvider />  
+<MudSnackbarProvider />  
+
+<MudLayout>  
+
+   <!-- TOP BAR -->  
+   <MudAppBar Color="Color.Primary" Elevation="1">  
+       <MudText Typo="Typo.h6">URL Shortener</MudText>  
+   </MudAppBar>  
+
+   <!-- SIDEBAR -->  
+   <MudDrawer Open="true" Variant="DrawerVariant.Persistent">  
+
+       <MudNavMenu>  
+
+           <AuthorizeView>  
+
+               <Authorized>
+
+                    <MudNavLink Href="/Dashboard"
+                                Icon="@Icons.Material.Filled.Dashboard">  
+                       Dashboard  
+                   </MudNavLink>  
+
+                   <MudNavLink Href="/short-link-list"  
+                               Icon="@Icons.Material.Filled.Link">  
+                       Links  
+                   </MudNavLink>
+                @*     <MudNavLink Href="authentication/logout"
+                                Icon="@Icons.Material.Filled.Login">
+                        Login
+                    </MudNavLink> *@
+
+                     <MudNavLink Icon="@Icons.Material.Filled.Logout"
+                                OnClick="Logout">
+                        Logout
+                    </MudNavLink>
+                   
+
+                </Authorized>  
+
+               <NotAuthorized>   
+
+                   <MudNavLink Href="authentication/login"  
+                               Icon="@Icons.Material.Filled.Login">  
+                       Login  
+                   </MudNavLink>  
+
+               </NotAuthorized>  
+
+           </AuthorizeView>   
+
+       </MudNavMenu>  
+
+   </MudDrawer>  
+
+   <!-- MAIN CONTENT -->  
+   <MudMainContent Class="pa-4">  
+       @Body  
+   </MudMainContent>  
+
+</MudLayout>
+@code {
+    @inject SignOutSessionStateManager SignOutManager
+
+    @inject NavigationManager Navigation
+
+
+    private async Task Logout()
+    {
+        await SignOutManager.SetSignOutState();
+     
+        Navigation.NavigateTo("authentication/logout");
+    }
+}

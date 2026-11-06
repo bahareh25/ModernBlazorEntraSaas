@@ -1,0 +1,17 @@
+﻿@inherits ConfirmDialogBase; 
+@using MudBlazor;
+<MudDialog>
+    <DialogContent>
+        <MudText>@ContentText</MudText>
+    </DialogContent>
+
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+
+        <MudButton Color="@Color"
+                   OnClick="Confirm">
+            @ButtonText
+        </MudButton>
+    </DialogActions>
+</MudDialog>
+

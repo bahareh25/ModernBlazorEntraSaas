@@ -1,0 +1,38 @@
+﻿@page "/test-token"
+
+@* @using Microsoft.Identity.Web
+@inject ITokenAcquisition TokenAcquisition
+
+<h3>Token Test</h3>
+
+<button @onclick="GetToken">
+    Get Token
+</button>
+
+<p>@message</p>
+
+@code {
+
+    private string? message;
+
+    private async Task GetToken()
+    {
+        try
+        {
+            var token = await TokenAcquisition
+                .GetAccessTokenForUserAsync(
+                    new[]
+                    {
+                        "api://f7daf1f6-282e-410b-89ca-c17b26b780b9/myscope"
+                        });
+
+            Console.WriteLine(token);
+
+            message = token;
+        }
+        catch (Exception ex)
+        {
+            message = ex.Message;
+        }
+    }
+} *@

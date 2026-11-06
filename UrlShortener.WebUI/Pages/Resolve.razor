@@ -1,0 +1,54 @@
+﻿@page "/r/{code}"
+@layout EmptyLayout
+@inherits ResolveBase
+@using MudBlazor;
+
+@if (Loading)
+{
+    <div class="d-flex justify-center pa-6">
+        <MudProgressCircular Indeterminate="true"
+                             Color="Color.Primary"
+                             Size="Size.Large" />
+    </div>
+}
+else if (NotFound)
+{
+    <div class="d-flex justify-center align-center"
+         style="height:100vh;">
+
+        <MudText Typo="Typo.h5">
+            Short link not found or expired.
+        </MudText>
+
+    </div>
+}
+else if (RequiresPassword)
+{
+    <div style="height:100vh; display:flex; justify-content:center; align-items:center;">
+
+        <div style="width:350px;">
+
+            <h3>This link is password protected</h3>
+
+            <p>Please enter the password to continue.</p>
+
+            <input @bind="Password"
+                   type="password"
+                   placeholder="Password"
+                   style="width:100%; padding:10px; margin-bottom:10px;" />
+
+            <button @onclick="SubmitPassword">
+                Continue
+            </button>
+
+            @if (!string.IsNullOrEmpty(ErrorMessage))
+            {
+                <p style="color:red;">
+                    @ErrorMessage
+                </p>
+            }
+
+        </div>
+
+    </div>
+}

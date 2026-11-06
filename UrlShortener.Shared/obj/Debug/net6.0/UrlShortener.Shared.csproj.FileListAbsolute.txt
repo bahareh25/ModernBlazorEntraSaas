@@ -1,0 +1,11 @@
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\bin\Debug\net6.0\UrlShortener.Shared.deps.json
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\bin\Debug\net6.0\UrlShortener.Shared.dll
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\bin\Debug\net6.0\UrlShortener.Shared.pdb
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\obj\Debug\net6.0\UrlShortener.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\obj\Debug\net6.0\UrlShortener.Shared.AssemblyInfoInputs.cache
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\obj\Debug\net6.0\UrlShortener.Shared.AssemblyInfo.cs
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\obj\Debug\net6.0\UrlShortener.Shared.csproj.CoreCompileInputs.cache
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\obj\Debug\net6.0\UrlShortener.Shared.dll
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\obj\Debug\net6.0\refint\UrlShortener.Shared.dll
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\obj\Debug\net6.0\UrlShortener.Shared.pdb
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Shared\obj\Debug\net6.0\ref\UrlShortener.Shared.dll

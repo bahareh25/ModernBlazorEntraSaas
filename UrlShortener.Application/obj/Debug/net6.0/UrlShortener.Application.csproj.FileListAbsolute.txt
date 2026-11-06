@@ -1,0 +1,17 @@
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\bin\Debug\net6.0\UrlShortener.Application.deps.json
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\bin\Debug\net6.0\UrlShortener.Application.dll
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\bin\Debug\net6.0\UrlShortener.Application.pdb
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\bin\Debug\net6.0\UrlShortener.Domain.dll
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\bin\Debug\net6.0\UrlShortener.Shared.dll
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\bin\Debug\net6.0\UrlShortener.Domain.pdb
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\bin\Debug\net6.0\UrlShortener.Shared.pdb
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\UrlShortener.Application.csproj.AssemblyReference.cache
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\UrlShortener.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\UrlShortener.Application.AssemblyInfoInputs.cache
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\UrlShortener.Application.AssemblyInfo.cs
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\UrlShortener.Application.csproj.CoreCompileInputs.cache
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\UrlShort.95A5A48A.Up2Date
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\UrlShortener.Application.dll
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\refint\UrlShortener.Application.dll
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\UrlShortener.Application.pdb
+D:\bahareh\NIKAMOOZ\ENtraID\UrlShortener\UrlShortener\UrlShortener.Application\obj\Debug\net6.0\ref\UrlShortener.Application.dll
